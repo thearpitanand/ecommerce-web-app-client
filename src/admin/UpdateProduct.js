@@ -40,22 +40,34 @@ const UpdateProduct = ({ match }) => {
   } = values;
 
   const preload = (productId) => {
-    console.log("productId", productId);
     getProduct(productId).then((data) => {
-      console.log(data);
-      // if (data.error) {
-      //   setValues({ ...values, error: data.error });
-      // } else {
-      //   setValues({
-      //     ...values,
-      //     name: data.name,
-      //     description: data.description,
-      //     price: data.price,
-      //     category: data.category,
-      //     stock: data.stock,
-      //     formData: new FormData(),
-      //   });
-      // }
+      if (data.error) {
+        setValues({ ...values, error: data.error });
+      } else {
+        preloadCategories();
+        setValues({
+          ...values,
+          name: data.name,
+          description: data.description,
+          price: data.price,
+          category: data.category,
+          stock: data.stock,
+          formData: new FormData(),
+        });
+      }
+    });
+  };
+
+  const preloadCategories = () => {
+    getCategories().then((data) => {
+      if (data.error) {
+        setValues({ ...values, error: data.error });
+      } else {
+        setValues({
+          categories: data,
+          formData: new FormData(),
+        });
+      }
     });
   };
 
@@ -71,23 +83,25 @@ const UpdateProduct = ({ match }) => {
 
   const onSubmit = (event) => {
     event.preventDefault();
-    // setValues({ ...values, error: "", loading: true });
-    // updateProduct(user._id, token, formData).then((data) => {
-    //   if (data.error) {
-    //     setValues({ ...values, error: data.error });
-    //   } else {
-    //     setValues({
-    //       ...values,
-    //       name: "",
-    //       description: "",
-    //       stock: "",
-    //       price: "",
-    //       photo: "",
-    //       loading: false,
-    //       createdProduct: data.name,
-    //     });
-    //   }
-    // });
+    setValues({ ...values, error: "", loading: true });
+    updateProduct(match.params.productId, user._id, token, formData).then(
+      (data) => {
+        if (data.error) {
+          setValues({ ...values, error: data.error });
+        } else {
+          setValues({
+            ...values,
+            name: "",
+            description: "",
+            stock: "",
+            price: "",
+            photo: "",
+            loading: false,
+            createdProduct: data.name,
+          });
+        }
+      }
+    );
   };
 
   const successMessage = () => (
@@ -95,7 +109,7 @@ const UpdateProduct = ({ match }) => {
       className="alert alert-success"
       style={{ display: createdProduct ? "" : "none" }}
     >
-      <p>{createdProduct} Created Successfully.</p>
+      <p>{createdProduct} Updated Successfully.</p>
     </div>
   );
 
@@ -104,7 +118,7 @@ const UpdateProduct = ({ match }) => {
       className="alert alert-danger"
       style={{ display: error ? "" : "none" }}
     >
-      <p>{error} - Unsuccessfully Creation</p>
+      <p>{error} - Unable to Update</p>
     </div>
   );
 
@@ -178,7 +192,7 @@ const UpdateProduct = ({ match }) => {
         onClick={onSubmit}
         className="btn btn-outline-success"
       >
-        Create Product
+        Update Product
       </button>
     </form>
   );
