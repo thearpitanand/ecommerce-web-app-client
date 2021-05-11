@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { isAuthenticated } from "../auth/helper";
 import Base from "../core/Base";
 import { createCategory } from "./helper/adminapicall";
 
 const AddCategory = () => {
+  const history = new useHistory();
   const [name, setName] = useState("");
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -13,8 +14,8 @@ const AddCategory = () => {
 
   const goBack = () => (
     <div>
-      <Link className="btn btn-sm btn-info mb-2 rounded" to="/admin/dashboard">
-        Back to Admin Dashboard
+      <Link className="btn btn-sm btn-info mt-2 rounded" to="/admin/dashboard">
+        Admin Dashboard
       </Link>
     </div>
   );
@@ -41,14 +42,25 @@ const AddCategory = () => {
       .catch();
   };
 
+  const redirectToAdminDashBoard = () => {
+    setTimeout(() => {
+      return history.push("/admin/dashboard");
+    }, 3000);
+  };
+
   const successMessage = () => {
     if (success) {
       return (
-        <h4 className="text-success pt-4">Category is Successfully Created</h4>
+        <div>
+          <h4 className="text-success pt-4">
+            Category is Successfully Created
+          </h4>
+          {redirectToAdminDashBoard()}
+        </div>
       );
     }
   };
-  
+
   const warningMessage = () => {
     if (error) {
       return <h4 className="text-danger pt-4">Failed To Create Category</h4>;
@@ -85,10 +97,10 @@ const AddCategory = () => {
     >
       <div className="row bg-white rounded m-2">
         <div className="col-md-8 offset-md-2">
+          {goBack()}
           {successMessage()}
           {warningMessage()}
           {categoryForm()}
-          {goBack()}
         </div>
       </div>
     </Base>

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { isAuthenticated } from "../auth/helper";
 import Base from "../core/Base";
 import { createProduct, getCategories } from "./helper/adminapicall";
 
 const AddProduct = () => {
+  const history = new useHistory();
   const { user, token } = isAuthenticated();
   const [values, setValues] = useState({
     name: "",
@@ -73,9 +74,18 @@ const AddProduct = () => {
           photo: "",
           loading: false,
           createdProduct: data.name,
+          getRedirect: true,
         });
       }
     });
+  };
+
+  const redirectToAdminDashBoard = () => {
+    if (getRedirect) {
+      setTimeout(() => {
+        return history.push("/admin/dashboard");
+      }, 3000);
+    }
   };
 
   const successMessage = () => (
@@ -188,6 +198,7 @@ const AddProduct = () => {
           {successMessage()}
           {errorMessage()}
           {createProductForm()}
+          {redirectToAdminDashBoard()}
         </div>
       </div>
     </Base>

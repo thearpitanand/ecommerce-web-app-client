@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, Redirect } from "react-router-dom";
+import { Link, Redirect, useHistory } from "react-router-dom";
 import { isAuthenticated } from "../auth/helper";
 import Base from "../core/Base";
 import {
@@ -9,6 +9,8 @@ import {
 } from "./helper/adminapicall";
 
 const UpdateProduct = ({ match }) => {
+  const history = new useHistory();
+
   const { user, token } = isAuthenticated();
   const [values, setValues] = useState({
     name: "",
@@ -98,10 +100,19 @@ const UpdateProduct = ({ match }) => {
             photo: "",
             loading: false,
             createdProduct: data.name,
+            getRedirect: true,
           });
         }
       }
     );
+  };
+
+  const redirectToAdminDashBoard = () => {
+    if (getRedirect) {
+      setTimeout(() => {
+        return history.push("/admin/dashboard");
+      }, 3000);
+    }
   };
 
   const successMessage = () => (
@@ -211,6 +222,7 @@ const UpdateProduct = ({ match }) => {
       </Link>
       <div className="row bg-dark text-white rounded m-1">
         <div className="col-md-8 offset-md-2 pt-4 pb-4">
+          {redirectToAdminDashBoard()}
           {successMessage()}
           {errorMessage()}
           {createProductForm()}

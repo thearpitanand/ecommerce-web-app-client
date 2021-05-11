@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import { isAuthenticated } from "../auth/helper";
 import Base from "../core/Base";
 import { getCategoryById, updateCategory } from "./helper/adminapicall";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const UpdateCategory = ({ match }) => {
+  const history = useHistory();
+
   const [name, setName] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
@@ -61,10 +63,19 @@ const UpdateCategory = ({ match }) => {
     );
   };
 
+  const redirectToAdminDashBoard = () => {
+    setTimeout(() => {
+      return history.push("/admin/dashboard");
+    }, 3000);
+  };
+
   const message = () => {
     if (success) {
       return (
-        <h4 className="text-success pt-4">Category Successfully Updated</h4>
+        <div>
+          <h4 className="text-success pt-4">Category Successfully Updated</h4>
+          {redirectToAdminDashBoard()}
+        </div>
       );
     } else if (error) {
       return <h4 className="text-danger pt-4">Failed To Create Category</h4>;
