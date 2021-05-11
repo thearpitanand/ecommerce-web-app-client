@@ -7,6 +7,7 @@ import { deleteProduct, getAllProduct } from "./helper/adminapicall";
 const ManageProducts = () => {
   const [products, setProducts] = useState([]);
   const { user, token } = isAuthenticated();
+  
   const preload = () => {
     getAllProduct().then((data) => {
       if (data.error) {

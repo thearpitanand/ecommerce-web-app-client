@@ -48,6 +48,7 @@ const AddCategory = () => {
       );
     }
   };
+  
   const warningMessage = () => {
     if (error) {
       return <h4 className="text-danger pt-4">Failed To Create Category</h4>;
