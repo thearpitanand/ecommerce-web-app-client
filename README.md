@@ -4,7 +4,7 @@
 
 <!-- PROJECT LOGO -->
 <a href="#" align="center">
-    <img src="../public/favicon.png" alt="Logo" width="80" height="80">
+    <img src="public/favicon.png" alt="Logo" width="80" height="80">
 </a>
 
 <!-- ABOUT THE PROJECT -->
@@ -17,7 +17,8 @@ E-Commerce, also known as Electronic commerce or internet commerce, refers to th
 
 <h3><a href=""><--Project Link--></a></h3>
 
-### Built With
+<!-- Built with section -->
+## Built With
 
 ### Frameworks
 
@@ -52,11 +53,10 @@ You will need a node in your system.
   npm install npm@latest -g
   ```
 
--Verify Installation
-
-```sh
-    node -v
-```
+- Verify Installation
+  ```sh
+  node -v
+  ```
 
 ### Installation
 
@@ -95,8 +95,7 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The page will reload if you make edits.
 
 <!-- Disclaimer -->
 
@@ -108,6 +107,8 @@ Your suggestions are highly acknowledged. [Open issue](https://github.com/thearp
 
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Name - Arpit Anand
+Twitter - [@the_arpitanand](https://twitter.com/the_arpitanand)
+LinkedIn - [@thearpitanand](https://www.linkedin.com/in/thearpitanand/)
 
-Project Link: [https://github.com/thearpitanand/ecommerce-web-app-client.git](https://github.com/thearpitanand/ecommerce-web-app-client.git), [https://github.com/thearpitanand/ecommerce-web-app-server.git](https://github.com/thearpitanand/ecommerce-web-app-server.git)
+Project Link: [Front - End](https://github.com/thearpitanand/ecommerce-web-app-client.git), [Back - End](https://github.com/thearpitanand/ecommerce-web-app-server.git)
