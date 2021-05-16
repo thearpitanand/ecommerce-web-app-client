@@ -13,11 +13,11 @@
 
 ## About The Project
 
-E-Commerce, also known as Electronic commerce or internet commerce, refers to the buying and selling of goods or services using the internet, and the transfer of money and data to execute these transactions.
+Shopping ASAP is an E-Commerce Web site, also known as Electronic commerce or internet commerce, refers to the buying and selling of goods or services using the internet, and the transfer of money and data to execute these transactions.
 
 <!-- <img src="" alt="Project Screenshot" width="80" height="80"> -->
 
-<h3><a href=""><--Project Link--></a></h3>
+<h3><a href=""><--Shopping ASAP--></a></h3>
 
 <!-- Built with section -->
 
