@@ -3,9 +3,11 @@
 <br />
 
 <!-- PROJECT LOGO -->
-<a href="#" align="center">
-    <img src="public/favicon.png" alt="Logo" width="80" height="80">
-</a>
+<p  align="center">
+    <a href="#">
+        <img src="public/favicon.png" alt="Logo" width="200" height="200">
+    </a>
+</p>
 
 <!-- ABOUT THE PROJECT -->
 
@@ -18,6 +20,7 @@ E-Commerce, also known as Electronic commerce or internet commerce, refers to th
 <h3><a href=""><--Project Link--></a></h3>
 
 <!-- Built with section -->
+
 ## Built With
 
 ### Frameworks
@@ -49,6 +52,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 You will need a node in your system.
 
 - npm
+
   ```sh
   npm install npm@latest -g
   ```
