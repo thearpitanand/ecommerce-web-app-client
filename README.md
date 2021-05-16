@@ -91,7 +91,7 @@ You will need a node in your system.
    REACT_APP_STRIPE_PAYMENT_PUBLIC_KEY="YOUR STRIPE API KEY"
    ```
 
-6. Run the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+6. Run the app in the development mode.
 
    ```sh
    npm start
