@@ -37,20 +37,18 @@ const BrainTreePayment = ({
   const showBrainTreeButton = () => {
     return (
       <div>
-        {info.clientToken !== null && products.length > 0 ? (
+        {info.clientToken !== null && products && products.length > 0 ? (
           <div className="text-center">
             <DropIn
               options={{ authorization: info.clientToken }}
               onInstance={(instance) => (info.instance = instance)}
             />
             <button className="btn btn-block btn-success" onClick={onPurchase}>
-              Buy
+              Buy Now
             </button>
           </div>
         ) : (
-          <div>
-            <h3>Please Sign in or add something to cart</h3>
-          </div>
+          <p>Add Something In Your Cart</p>
         )}
       </div>
     );
@@ -98,7 +96,10 @@ const BrainTreePayment = ({
   };
 
   return (
-    <div>
+    <div
+      style={{ display: isAuthenticated() ? "" : "none" }}
+      className="alert alert-secondary"
+    >
       <h3 className="alert-heading">Brain Tree: </h3>
       {showBrainTreeButton()}
     </div>

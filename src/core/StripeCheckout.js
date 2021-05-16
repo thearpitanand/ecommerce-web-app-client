@@ -23,9 +23,11 @@ const StripeCheckout = ({
 
   const getFinalPrice = () => {
     let price = 0;
-    products.map((product) => {
-      price += product.price * product.count;
-    });
+    if (products && products.length > 0) {
+      products.map((product) => {
+        price += product.price * product.count;
+      });
+    }
     return price;
   };
   const makeStripePayment = (token) => {
@@ -57,7 +59,7 @@ const StripeCheckout = ({
       .catch((err) => console.log(err));
   };
   const showStripeCheckOut = () => {
-    return isAuthenticated() ? (
+    return products && products.length > 0 ? (
       <StripeCheckoutButton
         stripeKey={process.env.REACT_APP_STRIPE_PAYMENT_PUBLIC_KEY}
         token={makeStripePayment}
@@ -69,14 +71,15 @@ const StripeCheckout = ({
         <button className="btn btn-success rounded btn-block">Buy Now</button>
       </StripeCheckoutButton>
     ) : (
-      <Link to="/signin">
-        <button className="btn btn-warning">SignIn</button>
-      </Link>
+      <p>Add Something in your cart</p>
     );
   };
 
   return (
-    <div>
+    <div
+      style={{ display: isAuthenticated() ? "" : "none" }}
+      className="alert alert-primary"
+    >
       <h3 className="alert-heading">Stripe: </h3>
       {showStripeCheckOut()}
     </div>

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { isAuthenticated } from "../auth/helper";
 import "../styles.css";
 import Base from "./Base";
 import BrainTreePayment from "./BrainTreePayment";
@@ -16,9 +18,11 @@ const Cart = () => {
 
   const getFinalPrice = () => {
     let price = 0;
-    products.map((product) => {
-      price += product.price * product.count;
-    });
+    if (products && products.length > 0) {
+      products.map((product) => {
+        price += product.price * product.count;
+      });
+    }
     return price;
   };
 
@@ -58,7 +62,7 @@ const Cart = () => {
     >
       <div className="row">
         <div className="col-8">
-          {products.length > 0 ? (
+          {products && products.length > 0 ? (
             loadAllProducts(products)
           ) : (
             <h2 className="text-white">No Products in Cart</h2>
@@ -66,12 +70,19 @@ const Cart = () => {
         </div>
         <div className="col-4">
           <h2 className="text-white">Total Amount: {getFinalPrice()}$</h2>
-          <div className="alert alert-primary">
-            <StripeCheckout products={products} setReload={setReload} />
-          </div>
-          <div className="alert alert-secondary">
-            <BrainTreePayment products={products} setReload={setReload} />
-          </div>
+
+          <StripeCheckout products={products} setReload={setReload} />
+          <BrainTreePayment products={products} setReload={setReload} />
+
+          {isAuthenticated() ? (
+            <div></div>
+          ) : (
+            <Link to="/signin">
+              <button className="btn btn-block rounded btn-outline-success">
+                SignIn
+              </button>
+            </Link>
+          )}
         </div>
       </div>
     </Base>
