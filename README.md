@@ -85,21 +85,19 @@ You will need a node in your system.
    ```
 
 5. Enter your API in `config.js`
+
    ```sh
    REACT_APP_BACKEND=http://localhost:8000/api
    REACT_APP_STRIPE_PAYMENT_PUBLIC_KEY="YOUR STRIPE API KEY"
    ```
 
-## Available Scripts
+6. Run the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-In the project directory, you can run:
+   ```sh
+   npm start
+   ```
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.
+7. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 <!-- Disclaimer -->
 
