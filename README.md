@@ -1,6 +1,90 @@
-# Getting Started with Create React App
+<h1>MERN stack - E-Commerce Web Application - Client</h1>
+
+<br />
+
+<!-- PROJECT LOGO -->
+<a href="#" align="center">
+    <img src="../public/favicon.png" alt="Logo" width="80" height="80">
+</a>
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+E-Commerce, also known as Electronic commerce or internet commerce, refers to the buying and selling of goods or services using the internet, and the transfer of money and data to execute these transactions.
+
+<!-- <img src="" alt="Project Screenshot" width="80" height="80"> -->
+
+<h3><a href=""><--Project Link--></a></h3>
+
+### Built With
+
+### Frameworks
+
+- [Bootstrap - CSS](https://getbootstrap.com)
+- [React - Javascript](https://reactjs.org/)
+
+### Add-Ons/Plugins:
+
+- [Read More React](https://www.npmjs.com/package/read-more-react)
+- [React Stripe Checkout](https://www.npmjs.com/package/react-stripe-checkout)
+- [BrainTree Web Drop in React](https://www.npmjs.com/package/braintree-web-drop-in-react)
+- [Query String](https://www.npmjs.com/package/query-string)
+- [React Router](https://www.npmjs.com/package/react-router)
+
+### Payment Gateways
+
+- [Stripe](https://stripe.com/in)
+- [Brain Tree](https://www.braintreepayments.com/)
+
+<!-- GETTING STARTED -->
+
+# Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### Prerequisites
+
+You will need a node in your system.
+
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+-Verify Installation
+
+```sh
+    node -v
+```
+
+### Installation
+
+1. Get a free API Key at [Stripe](https://stripe.com/in), [Brain Tree](https://www.braintreepayments.com/)
+
+2. Clone the Front-End repo
+
+   ```sh
+   git clone https://github.com/thearpitanand/ecommerce-web-app-client.git
+   ```
+
+3. Clone the Back-End repo
+
+   ```sh
+   git clone https://github.com/thearpitanand/ecommerce-web-app-server.git
+   ```
+
+4. Install NPM packages
+
+   ```sh
+   npm install
+   ```
+
+5. Enter your API in `config.js`
+   ```sh
+   REACT_APP_BACKEND=http://localhost:8000/api
+   REACT_APP_STRIPE_PAYMENT_PUBLIC_KEY="YOUR STRIPE API KEY"
+   ```
 
 ## Available Scripts
 
@@ -14,57 +98,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+<!-- Disclaimer -->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## DISCLAIMER
 
-### `npm run build`
+Your suggestions are highly acknowledged. [Open issue](https://github.com/thearpitanand/ecommerce-web-app-client/issues)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- CONTACT -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contact
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Project Link: [https://github.com/thearpitanand/ecommerce-web-app-client.git](https://github.com/thearpitanand/ecommerce-web-app-client.git), [https://github.com/thearpitanand/ecommerce-web-app-server.git](https://github.com/thearpitanand/ecommerce-web-app-server.git)
