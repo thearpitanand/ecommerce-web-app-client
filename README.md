@@ -15,9 +15,9 @@
 
 Shopping ASAP is an E-Commerce Website, also known as Electronic commerce or internet commerce, refers to the buying and selling of goods or services using the internet, and the transfer of money and data to execute these transactions.
 
-<!-- <img src="" alt="Project Screenshot" width="80" height="80"> -->
+![website-screenshot](https://github.com/thearpitanand/ecommerce-web-app-client/blob/main/website-screenshot.png)
 
-<h3><a href=""><--Shopping ASAP--></a></h3>
+[shopping ASAP Link](https://shopping-asap.netlify.app/)
 
 <!-- Built with section -->
 
@@ -98,6 +98,64 @@ You will need a node in your system.
    ```
 
 7. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+<!-- Test Details -->
+
+## Test Details
+
+### Admin Id, Password
+
+- ID
+  ```sh
+  test.admin@shopping-asap.com
+  ```
+- Password
+  ```sh
+  shopping-asap
+  ```
+
+### User Id, Password
+
+- ID
+  ```sh
+  test.user@shopping-asap.com
+  ```
+- Password
+  ```sh
+  shopping-asap
+  ```
+
+### Stripe Test Card
+
+- Card Number
+  ```sh
+   4242424242424242
+  ```
+
+- Card Expire Date
+  ```sh
+   12/21
+  ```
+
+- Card CVV
+  ```sh
+   123
+  ```
+
+### Brain Tree Test Card
+
+- Card Number
+  ```sh
+   378282246310005 (American Express)
+   5555555555554444 (Master Card)
+   4111111111111111 (Visa)
+  ```
+
+- Card Expire Date
+  ```sh
+   12/21
+  ```
+
 
 <!-- Disclaimer -->
 
