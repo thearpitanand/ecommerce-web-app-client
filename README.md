@@ -19,7 +19,7 @@ Shopping ASAP is an E-Commerce Website, also known as Electronic commerce or int
 <!-- ![website-screenshot](https://github.com/thearpitanand/ecommerce-web-app-client/blob/main/website-screenshot.png) -->
 
 <div align="center">
-    <img src="/website-screenshot.png" width="400px"</img> 
+    <img src="/website-screenshot.png" width="500px"</img> 
 </div>
 
 [shopping ASAP Link](https://shopping-asap.netlify.app/)
