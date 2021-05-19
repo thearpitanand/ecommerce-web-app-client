@@ -15,7 +15,12 @@
 
 Shopping ASAP is an E-Commerce Website, also known as Electronic commerce or internet commerce, refers to the buying and selling of goods or services using the internet, and the transfer of money and data to execute these transactions.
 
-![website-screenshot](https://github.com/thearpitanand/ecommerce-web-app-client/blob/main/website-screenshot.png)
+<!-- Screenshot -->
+<!-- ![website-screenshot](https://github.com/thearpitanand/ecommerce-web-app-client/blob/main/website-screenshot.png) -->
+
+<div align="center">
+    <img src="/website-screenshot.png" width="400px"</img> 
+</div>
 
 [shopping ASAP Link](https://shopping-asap.netlify.app/)
 
