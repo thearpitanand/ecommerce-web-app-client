@@ -87,7 +87,7 @@ You will need a node in your system.
    npm install
    ```
 
-5. Enter your API in `config.js`
+5. Create `.env` file then enter your API.
 
    ```sh
    REACT_APP_BACKEND=http://localhost:8000/api
