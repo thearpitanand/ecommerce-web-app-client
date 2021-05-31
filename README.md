@@ -4,7 +4,7 @@
 
 <!-- PROJECT LOGO -->
 <p  align="center">
-    <a href="#">
+    <a href="https://shopping-asap.netlify.app/">
         <img src="public/favicon.png" alt="Logo" width="200" height="200">
     </a>
 </p>
@@ -171,7 +171,9 @@ Your suggestions are highly acknowledged. [Open issue](https://github.com/thearp
 ## Contact
 
 Name - Arpit Anand\
-Twitter - [@the_arpitanand](https://twitter.com/the_arpitanand)\
-LinkedIn - [@thearpitanand](https://www.linkedin.com/in/thearpitanand/)
+Unsplash - [@thearpitanand](https://unsplash.com/@thearpitanand)\
+Twitter - [the_arpitanand](https://twitter.com/the_arpitanand)\
+LinkedIn - [thearpitanand](https://www.linkedin.com/in/thearpitanand/)\
+Instagram - [anand_arpit](https://www.instagram.com/anand_arpit/)
 
 Project Link: [Front - End](https://github.com/thearpitanand/ecommerce-web-app-client.git), [Back - End](https://github.com/thearpitanand/ecommerce-web-app-server.git)
