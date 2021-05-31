@@ -131,11 +131,13 @@ You will need a node in your system.
 ### Stripe Test Card
 
 - Card Number
+
   ```sh
    4242424242424242
   ```
 
 - Card Expire Date
+
   ```sh
    12/21
   ```
@@ -148,6 +150,7 @@ You will need a node in your system.
 ### Brain Tree Test Card
 
 - Card Number
+
   ```sh
    378282246310005 (American Express)
    5555555555554444 (Master Card)
@@ -158,7 +161,6 @@ You will need a node in your system.
   ```sh
    12/21
   ```
-
 
 <!-- Disclaimer -->
 
@@ -174,6 +176,5 @@ Name - Arpit Anand\
 Unsplash - [@thearpitanand](https://unsplash.com/@thearpitanand)\
 Twitter - [the_arpitanand](https://twitter.com/the_arpitanand)\
 LinkedIn - [thearpitanand](https://www.linkedin.com/in/thearpitanand/)\
-Instagram - [anand_arpit](https://www.instagram.com/anand_arpit/)
-
+Instagram - [anand_arpit](https://www.instagram.com/anand_arpit/)\
 Project Link: [Front - End](https://github.com/thearpitanand/ecommerce-web-app-client.git), [Back - End](https://github.com/thearpitanand/ecommerce-web-app-server.git)
